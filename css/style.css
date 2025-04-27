@@ -52,7 +52,7 @@
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);
-  font-size: 1rem;
+  font-size: 4rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -9812,11 +9812,11 @@ a {
   color: #888;
   padding: 70px 0; }
   .site-footer a {
-    color: #777;
+    color: #000;
     position: relative;
     display: inline-block; }
     .site-footer a:hover {
-      color: #000; }
+      color: #ffff; }
   .site-footer .footer-cta h2, .site-footer .footer-cta .h2 {
     font-size: 30px;
     color: #ff4c4c; }
