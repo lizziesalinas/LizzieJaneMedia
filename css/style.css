@@ -6050,7 +6050,8 @@ textarea.form-control-lg {
   margin-right: auto !important; }
 
 .mb-0 {
-  margin-bottom: 0 !important; }
+  margin-bottom: 0 !important;
+color : #000; }
 
 .mb-1 {
   margin-bottom: 0.25rem !important; }
@@ -8639,10 +8640,13 @@ textarea.form-control-lg {
     color: #fff; }
 
 .site-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
-  z-index: 9;
-  width: 100%; }
+  z-index: 9999;
+  width: 100%; 
+  background: rgba(0, 0, 0, 0.3); /* transparent black background */
+  backdrop-filter: blur(10px); /* adds a glassy blur effect */
+  padding: 20px 0;}
 
 .site-nav {
   padding-top: 20px;
@@ -8651,13 +8655,13 @@ textarea.form-control-lg {
   .site-nav h1, .site-nav .h1 {
     margin: 0;
     padding: 0;
-    font-size: 24px; }
+    font-size: 40px; }
   .site-nav .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-nav .site-navigation .site-menu > li {
       display: inline-block; }
       .site-nav .site-navigation .site-menu > li > a {
-        font-size: 14px;
+        font-size: 20px;
         padding: 10px 15px;
         display: inline-block;
         text-decoration: none !important;
@@ -9067,9 +9071,9 @@ a {
     transform: scale(1.3) translate(0%, -15%); }
   .hero a, .bg-image a {
     color: #fff; }
-  .hero.overlay, .bg-image.overlay {
-    position: relative; }
-    .hero.overlay:before, .bg-image.overlay:before {
+  /* .hero.overlay, .bg-image.overlay {
+    position: relative; } */
+    /* .hero.overlay:before, .bg-image.overlay:before {
       content: "";
       position: absolute;
       left: 0;
@@ -9080,7 +9084,7 @@ a {
       background-color: rgba(0, 0, 0, 0.4); }
     .hero.overlay > .container, .bg-image.overlay > .container {
       position: relative;
-      z-index: 2; }
+      z-index: 2; } */
   .hero svg, .bg-image svg {
     position: absolute;
     bottom: 0;
@@ -9397,7 +9401,7 @@ a {
   display: none; }
 
 .section-contact {
-  background-color: #efefef;
+  background-color: #3E4636;
   z-index: 9;
   position: relative;
   margin-top: -100px !important; }
@@ -9419,6 +9423,13 @@ a {
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none; }
+
+    .section-contact .container {
+      background-color: #ffff;
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    
 
 .social li {
   display: inline-block; }
@@ -9847,5 +9858,20 @@ a {
         }
 
         body {
-          background-color: #9CAF88; /* Sage green or any color you want */
+          background-color: #717F62; /* Sage green or any color you want */
+
+          
+        }
+
+        .hero {
+          position: relative;
+          height: 100vh;                               /* full viewport height */
+          background: url("../images/hills.jpg")      /* path to your file */
+                       center center / cover no-repeat;
+          overflow: hidden;
+        }
+        
+        .hero .container {
+          position: relative;                          /* so your text floats above bg */
+          z-index: 1;
         }
