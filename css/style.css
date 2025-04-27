@@ -9836,3 +9836,16 @@ a {
       .site-footer .social li a:hover {
         background: #000;
         color: #fff; }
+
+        .instagram-heading {
+          font-family: 'Playfair Display', serif; /* You already load this font */
+          font-size: 2.5rem; /* Bigger */
+          font-weight: 700; /* Bold */
+          text-transform: uppercase; /* Makes it all caps */
+          letter-spacing: 1px; /* Adds space between letters */
+          margin-bottom: 30px;
+        }
+
+        body {
+          background-color: #9CAF88; /* Sage green or any color you want */
+        }
