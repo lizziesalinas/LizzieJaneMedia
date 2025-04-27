@@ -8657,15 +8657,18 @@ color : #000; }
     padding: 0;
     font-size: 40px; }
   .site-nav .site-navigation .site-menu {
-    margin-bottom: 0; }
+    margin-bottom: 0; 
+}
     .site-nav .site-navigation .site-menu > li {
       display: inline-block; }
       .site-nav .site-navigation .site-menu > li > a {
         font-size: 20px;
         padding: 10px 15px;
-        display: inline-block;
+        display: inline-flex;
         text-decoration: none !important;
-        color: rgba(255, 255, 255, 0.7); }
+        color: rgba(255, 255, 255, 0.7); 
+        margin-left: auto;    /* pushes the UL to the right */
+        gap: 2rem;            /* space between links */}
         .site-nav .site-navigation .site-menu > li > a:hover {
           color: #fff; }
       .site-nav .site-navigation .site-menu > li.cta-button a {
@@ -9875,3 +9878,4 @@ a {
           position: relative;                          /* so your text floats above bg */
           z-index: 1;
         }
+
