@@ -292,7 +292,8 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; }
+  -webkit-appearance: button;
+  appearance: button; }
   button:not(:disabled),
   [type="button"]:not(:disabled),
   [type="reset"]:not(:disabled),
@@ -339,7 +340,8 @@ legend {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: textfield; }
+  -webkit-appearance: textfield;
+  appearance: textfield; }
 
 /* rtl:raw:
 [type="tel"],
@@ -1949,7 +1951,6 @@ textarea.form-control-lg {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  vertical-align: middle;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -2010,7 +2011,8 @@ textarea.form-control-lg {
   -moz-appearance: none;
   appearance: none;
   -webkit-print-color-adjust: exact;
-  color-adjust: exact;
+  print-color-adjust: exact;
+  print-color-adjust: exact;
   -webkit-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -6066,7 +6068,7 @@ color : #000; }
   margin-bottom: 1.5rem !important; }
 
 .mb-5 {
-  margin-bottom: 3rem !important; }
+  margin-bottom: 3rem !important;}
 
 .mb-auto {
   margin-bottom: auto !important; }
@@ -8666,9 +8668,7 @@ color : #000; }
         padding: 10px 15px;
         display: inline-flex;
         text-decoration: none !important;
-        color: rgba(255, 255, 255, 0.7); 
-        margin-left: auto;    /* pushes the UL to the right */
-        gap: 2rem;            /* space between links */}
+        color: rgba(255, 255, 255, 0.7); }
         .site-nav .site-navigation .site-menu > li > a:hover {
           color: #fff; }
       .site-nav .site-navigation .site-menu > li.cta-button a {
@@ -8798,6 +8798,10 @@ color : #000; }
       background: #000; }
     .site-mobile-menu-close > span:before {
       -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      transform: rotate(45deg);
+      transform: rotate(45deg);
+      transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg); }
     .site-mobile-menu-close > span:after {
@@ -9024,12 +9028,14 @@ color : #000; }
 .burger.active:before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5);
   /*for IE*/ }
 
 .burger.active:after {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-5);
   /*for IE*/ }
 
@@ -9878,4 +9884,53 @@ a {
           position: relative;                          /* so your text floats above bg */
           z-index: 1;
         }
-
+        .site-navigation {
+          display: flex;
+          justify-content: center; /* Centers the navigation links */
+          align-items: center;
+        }
+        
+        .site-menu {
+          display: flex;
+          list-style: none;
+          gap: 20px; /* Adds spacing between links */
+          padding: 0;
+          margin: 0;
+        }
+        
+        .site-menu li a {
+          text-decoration: none;
+          color: #000; /* Adjust color as needed */
+          font-size: 16px;
+          font-weight: 500;
+        }
+        
+        .burger {
+          display: none; /* Hide the burger menu for now */
+        }
+        
+        /* Responsive styles for smaller screens */
+        @media (max-width: 992px) {
+          .site-navigation {
+            justify-content: space-between; /* Adjust for mobile view */
+          }
+        
+          .burger {
+            display: block; /* Show the burger menu */
+          }
+        
+          .site-menu {
+            display: none; /* Hide links on smaller screens */
+          }
+        
+          .site-menu.active {
+            display: flex; /* Show links when active */
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: #fff;
+            padding: 20px;
+          }
+        }
