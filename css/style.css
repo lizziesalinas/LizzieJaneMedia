@@ -9934,3 +9934,19 @@ a {
             padding: 20px;
           }
         }
+
+        /* make your thumbnails line up in a tight grid: */
+.gallery a {
+  display: inline-block;
+  margin: 5px;
+}
+.gallery img {
+  width: 150px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  transition: transform .15s;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
