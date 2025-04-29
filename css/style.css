@@ -10046,3 +10046,66 @@ a {
 @media (max-width: 576px) {
   .site-nav .site-menu > li > a { font-size: 14px; }
 }
+/* ————— Glassy navbar backdrop ————— */
+.navbar {
+  z-index: 9999;
+  background: rgba(255,255,255,0.15) !important;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);}
+
+  /* .navbar:hover {
+  background: rgba(255,255,255,0.25) !important;
+} */
+
+/* Nav‐link text styling */
+.navbar-nav .nav-link {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  transition: background 0.2s, color 0.2s;
+  border-radius: 0.25rem;
+}
+
+/* Hover/active state with a semi-opaque “gloss” */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: rgba(255,255,255,0.25) !important;
+  color: #000 !important;
+}
+
+/* Toggler (“hamburger”) background & icon color */
+.navbar-toggler {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+.navbar-light .navbar-toggler-icon {
+  filter: invert(1);
+}
+/* keep navbar floating on top */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  z-index: 9999;            /* sits above everything */
+}
+
+/* push page content below the fixed nav */
+body {
+  padding-top: 70px;        /* adjust this to match your navbar’s total height */
+}
+
+/* make the brand/logo text white */
+.navbar-brand {
+  color: #fff !important;
+}
+
+/* keep it white on hover/focus too */
+/* .navbar-brand:hover,
+.navbar-brand:focus {
+  color: #fff !important;
+} */
+.navbar {
+  background-color: #9CAF88 !important;  /* your sage green */
+  backdrop-filter: none !important;      /* turn off the blur */
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow for depth */
+  border-bottom: none;                   /* remove any border */
+}
