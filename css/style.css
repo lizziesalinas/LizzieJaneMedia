@@ -8197,6 +8197,10 @@ fieldset:disabled .btn {
   color: #fff !important;
 }
 
+.text-green {
+  color: #071932 !important;
+}
+
 .text-body {
   color: #212529 !important;
 }
